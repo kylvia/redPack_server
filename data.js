@@ -226,39 +226,56 @@ module.exports = {
 
     "/demo/getTree":[
         {
-            active: true,
             pId:null,
             id:1,
-            toggleOpen: true,
-            name:'办公室',
+            name:'根节点',
             child:[{
-                active: true,
                 pId:1,
                 id:11,
-                toggleOpen: false,
                 name:'节点1',
                 child:[{
                     active: true,
                     pId:11,
                     id:111,
-                    toggleOpen: false,
-                    name:'节点11'
+                    name:'节点11',
+                    child:[{
+                        pId:111,
+                        id:1111,
+                        name:'节点11'
+                    },{
+                        id:1112,
+                        pId:111,
+                        name:'节点12'
+                    }]
                 },{
-                    active: true,
                     id:112,
                     pId:11,
-                    toggleOpen: false,
-                    name:'节点12'
+                    name:'节点12',
+                    child:[{
+                        pId:112,
+                        id:1121,
+                        name:'节点11'
+                    },{
+                        id:1122,
+                        pId:112,
+                        name:'节点12'
+                    }]
                 }]
             },{
-                active: true,
                 id:12,
                 pId:1,
-                toggleOpen: false,
                 name:'节点2'
             }]
         }
-    ]
+    ],
+    "/demo/getList":{
+        'data|20': [
+            {
+                "name": "@string",
+                "headImg": "@img('40x40','#28B4F0')"
+            }
+        ]
+    }
 
 
 

@@ -23,6 +23,21 @@ router.post('/demo/getTree', async ctx => {
     // ctx.body = Mock.mock(res)
         
 })
+router.post('/demo/getList', async ctx => {
+    console.log(ctx)
+    const res = Data['/demo/getList']
+    if(res === undefined){
+        ctx.throw(404);
+    }
+    ctx.body = {
+        "iRet": 0,
+        "sMsg": "成功！",
+        "jData": Mock.mock(res),
+        "sSerial": ""
+    }
+    // ctx.body = Mock.mock(res)
+
+})
 router.get('', async ctx => {
     const res = Data[ctx.query.route]
     if(res === undefined){
